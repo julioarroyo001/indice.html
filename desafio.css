@@ -1,0 +1,311 @@
+/*/*fondo de mesa de trabajo*/
+html{
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #F3F5FC;
+}
+
+
+
+/*logo alua A*/
+.logo{
+  position: absolute;
+  width: 120px;
+  height: 48px;
+  top: 40px;
+  left: 40px;
+  gap: 40px;
+}
+
+
+
+/*texto ingresado para encriptar*/
+.fake-textarea {
+  color: #0A3871;
+  background-color: #F3F5FC;
+  font-size: 32px;
+  line-height: 0.90;
+  font-family: 'Inter';
+  font-style: normal;
+  width: 37rem;
+  padding: .5rem;
+  min-height: 3rem;
+  position: absolute;
+  left: 140px;
+  top: 100px;
+  }
+
+
+  /*al dar click */
+.fake-textarea:empty::before {
+  position: absolute;
+  content: "Escribe aquí...";
+}
+
+/*espacio para el logo ! y el texto*/
+section.frame1{
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  position: absolute;
+  width: 229px;
+  height: 18px;
+  left: 240px;
+  top: 851px;
+}
+
+
+
+/*posicion del log ! y tamaño */
+.excla{
+
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
+/*posicion y tamaño del texto ¡*/
+.textoIn{
+  width: 205px;
+  height: 18px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/*frame contenedor del vector imagen*/
+section.frame3{
+  position: absolute;
+  width: 400px;
+  height: 944px;
+  left: 1000px;
+  top: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+/***** para que el texto oculto este ubicado***/
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 8px;
+}
+
+/***************    texto oculto           *******************/
+.testoOculto{
+  color: #0A3871;
+  background-color: #FFFFFF;
+  font-size: 18px;
+  line-height: 0.90;
+  font-family: 'Inter';
+  font-style: normal;
+  width: 23rem;
+  padding: .5rem;
+  min-height: 3rem;
+  position: absolute;
+ }
+
+/*vector svg*/
+object.vector{
+  position: absolute;
+  width: 336px;
+  height: 304px;
+  left: 55px;
+  top: 283px;
+ }
+
+
+/*contenedor para el texto de mensaje*/
+div.frame5{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 336px;
+  height: 300px;
+  left: 50px;
+  top: 619px;
+  align-items: center;
+ }
+
+
+/************    textos  frame5     **************/
+.text1{
+  width: 300px;
+  height: 58px;
+  font-family: 'Inter';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  /* or 29px */
+  text-align: center;
+ /* Gray/gray-500 */
+  color: #343A40;
+  
+}
+
+
+.text2{
+  width: 300px;
+  height: 58px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  text-align: center;
+  color: #495057;
+}
+
+/*************************************************************/
+
+
+
+.copiar{
+border: 1px solid #0A3871;
+border-radius: 24px;
+box-sizing: border-box;
+width: 328px;
+height: 67px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #0A3871;
+position: absolute;
+left: 0px;
+top: 230px;
+}
+/**********  cambia color boton copiar en evento click **********/
+.copiar:active{
+  width: 328px;
+  height: 67px;
+  background: #0A3871;
+  border-radius: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+/*contenedor de botones */
+div.botones{
+position: absolute;
+width: 680px;
+height: 67px;
+left: 240px;
+top: 885px;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+}
+
+
+/*contenedor del primer boton*/
+.iniprimero{
+  width: 328px;
+  height: 67px;
+}
+
+
+/*boton encrip´tar*/
+.encriptar{
+  width: 328px;
+  height: 67px;
+  background: #0A3871;
+  border-radius: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+/************   cambia color en evento click ****************/
+.encriptar:active{
+  box-sizing: border-box;
+background: #D8DFE8;
+border: 1px solid #0A3871;
+border-radius: 24px;
+flex: none;
+order: 1;
+flex-grow: 0;
+width: 328px;
+height: 67px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #0A3871;
+}
+
+
+
+/*contenedor del segundo boton*/
+.inisegundo{
+  width: 328px;
+  height: 67px;
+}
+
+
+
+
+/******  boton desencriptar *******/
+.desencriptar{
+box-sizing: border-box;
+background: #D8DFE8;
+border: 1px solid #0A3871;
+border-radius: 24px;
+flex: none;
+order: 1;
+flex-grow: 0;
+width: 328px;
+height: 67px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #0A3871;
+}
+/*****    cambia color en evento click    *****/
+.desencriptar:active{
+  width: 328px;
+  height: 67px;
+  background: #0A3871;
+  border-radius: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}

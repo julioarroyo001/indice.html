@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="desafio.css">
+    
+<html >
+   
+    <body>
+        <header>
+            <div class="logo">
+                <object data="logo.svg" ></object>
+            </div>
+            <div contenteditable class="fake-textarea">
+                Ingrese el texto aquí...
+            </div>
+        </header>
+<!-- ******************medio botones y excla **************** -->
+
+        <main  >
+                    
+            <section class="frame1">
+                    <object class="excla" data="excla.svg" >                        
+                    </object>
+                    <div class="textoIn"> Solo letras minúsculas y sin acentos 
+                    </div>
+            </section>
+            
+            <div class="botones">
+                <div class="iniprimero">
+                    <button class="encriptar" id="encriptar"> Encriptar</button>
+                </div>
+                <div class="inisegundo">
+                    <button class="desencriptar" > Desencriptar</button>
+                </div>
+            </div>
+        </main>
+<!-- *************  pie pag  fram 3 blanco**************** -->
+
+        <footer >
+            <section class="frame3"> 
+                <div contenteditable class="testoOculto" >
+                    
+                </div>
+                <object class="vector" data="vector.svg" id="vector">
+                </object>  
+                <div class="frame5">
+                    <label type="text" class ="text1" id="text1">
+                    Ningún mensaje fue encontrado
+                    </label>
+                    <label type="text" class ="text2" id="text2">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                    </label>
+                    <div class="frame6">
+                        <button class="copiar" > Copiar</button>
+                    </div>
+                   
+                </div>
+            </section>
+        </footer>            
+    </body>
+    <script>
+
+
+
+<!-- ************* ocultar elementos    **************** -->
+document.getElementById("encriptar").addEventListener("click", function(){
+  document.getElementById("vector").style.display = "none";
+  document.getElementById("text1").style.display = "none";
+  document.getElementById("text2").style.display = "none";
+});
+        var tarea = document.querySelector(".fake-textarea")
+      
+        function ejecutar(){
+        var texto = tarea.innerHTML;
+        var nuevaCadena = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g,"ufat");
+        var testoOculto = document.querySelector(".testoOculto");
+        testoOculto.innerHTML = nuevaCadena;
+        console.log(nuevaCadena);
+        }
+      
+   
+    
+        function desejecutar(){
+        var texto = tarea.innerHTML;
+        var nuevaCadena = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g,"u");
+        var testoOculto = document.querySelector(".testoOculto");
+        testoOculto.innerHTML = nuevaCadena;
+        console.log(nuevaCadena);
+        }
+      
+        var button = document.querySelector(".desencriptar");
+        button.onclick = desejecutar;
+    
+        function copyText() {
+    var text = document.querySelector('.testoOculto').innerHTML;
+    var tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+     }
+    var button = document.querySelector(".copiar");
+    button.onclick = copyText;
+    var button = document.querySelector(".encriptar");
+    button.onclick = ejecutar;
+
+        </script>
+</html>
+
+
+
+
+
+
